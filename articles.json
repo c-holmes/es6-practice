@@ -1,0 +1,38 @@
+
+[
+	{
+		"id": 1,
+		"author": "Matt",
+		"content":  "Blog posts are great!",
+		"dateCreated": 1501529119000,
+		"comments": [1,3]
+	},
+	{
+		"id": 2,
+		"author": "Chris",
+		"content":  "Blog posts are horrible!",
+		"dateCreated": 1501629119000,
+		"comments": []
+	},
+	{
+		"id": 3,
+		"author": "Emma",
+		"content":  "Blog posts are okay!",
+		"dateCreated": 1501729119000,
+		"comments": [2]
+	},
+	{
+		"id": 5,
+		"author": "Emma",
+		"content":  "These Blog posts are getting out of control!",
+		"dateCreated": 1501829119000,
+		"comments": []
+	},
+	{
+		"id": 4,
+		"author": "Chris",
+		"content":  "My Second Blog is alot better",
+		"dateCreated": 1501929119000,
+		"comments": []
+	}
+]

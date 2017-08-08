@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "postId": 1,
+        "author": "Dan",
+        "content": "Matt, you gotta check out my blog.",
+        "dateCreated": 1502124725
+    },
+    {
+        "id": 3,
+        "postId": 1,
+        "author": "Pete",
+        "content": "Matt, you should not be so positive all the time.",
+        "dateCreated": 1502127725
+    },
+    {
+        "id": 5,
+        "postId": 3,
+        "author": "Dean",
+        "content": "Hey Emma, I like your post.",
+        "dateCreated": 1502739025
+    }
+]
