@@ -5,41 +5,40 @@
   <title>es6 Practice</title>
 </head>
 <body>
-    <div id="main"></div>
+    <div id="main"><!--Render Out Featured Blog Markup Here--></div>
 
-    <script>
+	<script>
 
-    //fetch posts
-    const posts = fetch('http://localhost:3000/blog-api/articles');
+	//fetch posts
+	const posts = fetch('http://localhost:3000/blog-api/articles');
 
-    //post promise
-    posts
-      .then(data => data.json())
-      .then(data => { grabLatestPosts(data, 3) })
-      .catch((err) => {
-        console.error(err);
-      })
+	//post promise
+	posts
+		.then(data => data.json())
+		.then(data => { grabLatestPosts(data, 3) })
+		.catch((err) => {
+			console.error(err);
+		})
 
-    function grabLatestPosts(data, max){
+	function grabLatestPosts(data, max){
+		//sort array
+		const posts = data.sort((a, b) => {
+			const dateA = new Date(a.dateCreated);
+			const dateB = new Date(b.dateCreated);
 
-    	//sort array
-    	const posts = data.sort((a, b) => {
-    		const dateA = new Date(a.dateCreated);
-    		const dateB = new Date(b.dateCreated);
+			if(dateA < dateB) return 1;
+			if(dateA > dateB) return -1;
+			return 0;
+		})
 
-    		if(dateA < dateB) return 1;
-    		if(dateA > dateB) return -1;
-    		return 0;
-    	})
-
-    	//grab the max num of posts
+		//grab the max num of posts
 		const featPosts = [...posts.slice(0, max)]
 
-		//return (log to the console)
+		//log to the console - should render out in DOM
 		return console.log(featPosts);
-    }
+	}
 
-  	</script>
+	</script>
 
 </body>
 </html>
